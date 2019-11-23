@@ -19,18 +19,22 @@
     Search: <input type="search" name="q" value = "branches"><a href="branches.html">&nbsp;
         <input type="submit">&nbsp;&nbsp;
     Search: <input type="search" name="q" value = "contact"><a href="contact.html">&nbsp;
-  <input type="submit" onclick="loadDoc()">>
+  <input type="submit">
 
-  function loadDoc() {
-    var xhttp = new XMLHttpRequest();
-    xhttp.onreadystatechange = function() {
-      if (this.readyState == 4 && this.status == 200) {
-       document.getElementById("demo").innerHTML = this.responseText;
-      }
-    };
-    xhttp.open("GET", "loadDoc", true);
-    xhttp.send();
-  }
+ <button type="button" onclick="loadDoc()">Change Content</button>
+
+<script>
+function loadDoc() {
+  var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      document.getElementById("demo").innerHTML = this.responseText;
+    }
+  };
+  xhttp.open("GET", "", true);
+  xhttp.send();
+}
+    </script>
     <link rel="stylesheet" href="CSS/nav.css"> 
     <link rel="stylesheet" href="CSS/style.css"> 
     <link rel="stylesheet" href="CSS/footer.css"> 

@@ -3,7 +3,7 @@ let larrow = document.getElementById("left-arrow"),
     rarrow = document.getElementById("right-arrow"),
     sliderImg = document.querySelectorAll(".slide"),
     current=0,
-    time=5000;
+    time=3000;
 
 function reset(){
     for(let i=0; i<sliderImg.length; i++){

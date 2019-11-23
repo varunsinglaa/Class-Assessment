@@ -7,7 +7,7 @@
     <title>The Energy Hub</title>
     <link rel="icon" href="img/logo.png">
     
-    
+    <p id="demo">Let AJAX change this text</p>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Exo:900|Fjalla+One|Lato|Merriweather|Ultra" rel="stylesheet">
@@ -21,6 +21,16 @@
     Search: <input type="search" name="q" value = "contact"><a href="contact.html">&nbsp;
   <input type="submit">
 
+  function loadDoc() {
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function() {
+      if (this.readyState == 4 && this.status == 200) {
+       document.getElementById("demo").innerHTML = this.responseText;
+      }
+    };
+    xhttp.open("GET", "loadDoc", true);
+    xhttp.send();
+  }
     <link rel="stylesheet" href="CSS/nav.css"> 
     <link rel="stylesheet" href="CSS/style.css"> 
     <link rel="stylesheet" href="CSS/footer.css"> 
